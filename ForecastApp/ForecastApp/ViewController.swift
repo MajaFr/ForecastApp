@@ -10,11 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var cityTextField: UITextField!
     
     @IBOutlet weak var entryButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +20,6 @@ class ViewController: UIViewController {
         cityTextField.attributedPlaceholder = NSAttributedString(
             string: "Enter a city",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        
-//        entryButton.setTitleColor(.white, for: .normal)
     }
     
     @IBAction func entryButtonAction(_ sender: UIButton) {
@@ -45,9 +41,6 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             } else if let data = data {
                 do {
-//                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-//                    print(json)
-//
                     let weatherReport = try JSONDecoder().decode(WeatherReport.self, from: data)
                     print(weatherReport)
                     
@@ -60,11 +53,11 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
         dataTask.resume()
     }
     
     @IBAction func returnToMainViewController(_ sender: UIStoryboardSegue) {
-    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

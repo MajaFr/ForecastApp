@@ -9,7 +9,6 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
-    
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var imageWeather: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
@@ -25,7 +24,5 @@ class WeatherViewController: UIViewController {
         imageWeather.image = weatherReport.condtionImage
         tempLabel.text = "\(weatherReport.temperaturaCencjus.temperture) °C"
         descriptionLabel.text = weatherReport.descriptionWeather.first?.description
-
     }
-    
 }
