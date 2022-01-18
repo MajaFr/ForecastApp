@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ForecastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherImage" translatesAutoresizingMaskIntoConstraints="NO" id="ozK-ZF-nay">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forecast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-An-D9m">
+                                <rect key="frame" x="97.666666666666686" y="224" width="180" height="50"/>
+                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mfs-7w-QB9"/>
+                                    <constraint firstAttribute="width" constant="180" id="XKf-91-iRy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="45"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZeQ-hH-K12">
+                                <rect key="frame" x="47.666666666666657" y="324" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.50674504040000001" green="0.499460876" blue="0.59609073400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8xb-ld-aNT"/>
+                                    <constraint firstAttribute="width" constant="280" id="9cM-FB-xl0"/>
+                                </constraints>
+                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kz1-CS-gT2">
+                                <rect key="frame" x="152.66666666666666" y="404" width="70" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6qa-5c-LIC"/>
+                                    <constraint firstAttribute="width" constant="70" id="jak-Sc-KCD"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Go">
+                                            <attributes>
+                                                <font key="NSFont" size="27" name="HiraMinProN-W3"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="entryButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ns8-cA-Gis"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kz1-CS-gT2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JjM-IU-qMq"/>
+                            <constraint firstItem="kz1-CS-gT2" firstAttribute="top" secondItem="ZeQ-hH-K12" secondAttribute="bottom" constant="40" id="Jjt-w0-ews"/>
+                            <constraint firstItem="ZeQ-hH-K12" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K9B-Pn-oGy"/>
+                            <constraint firstItem="ozK-ZF-nay" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KcQ-S7-eah"/>
+                            <constraint firstItem="ZeQ-hH-K12" firstAttribute="top" secondItem="cp2-An-D9m" secondAttribute="bottom" constant="50" id="Mg5-j3-jJC"/>
+                            <constraint firstItem="cp2-An-D9m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qd1-ag-Q46"/>
+                            <constraint firstItem="ozK-ZF-nay" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T8X-pj-PpT"/>
+                            <constraint firstAttribute="bottom" secondItem="ozK-ZF-nay" secondAttribute="bottom" id="U96-ye-Ov7"/>
+                            <constraint firstItem="ozK-ZF-nay" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gHw-Lq-dx2"/>
+                            <constraint firstItem="cp2-An-D9m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="pGO-SQ-j3B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="ZeQ-hH-K12" id="219-uN-CZI"/>
+                        <outlet property="entryButton" destination="kz1-CS-gT2" id="xF7-h3-XAy"/>
+                        <segue destination="10w-J0-Dnv" kind="show" identifier="segue.Main.enterCityToWeather" id="pGw-zp-BQ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="nPB-VM-Jxa">
+            <objects>
+                <viewController id="10w-J0-Dnv" customClass="WeatherViewController" customModule="ForecastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vhv-40-NTq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherImage" translatesAutoresizingMaskIntoConstraints="NO" id="FlO-Kq-Jtb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warsaw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUF-bd-d16">
+                                <rect key="frame" x="16" y="150" width="343" height="36.333333333333343"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="35"/>
+                                <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="quaternarySystemFillColor"/>
+                                <size key="shadowOffset" width="8" height="-1"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ut-jh-aXt">
+                                <rect key="frame" x="102.66666666666669" y="225" width="170" height="171.66666666666666"/>
+                                <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="4g1-if-s5y"/>
+                                    <constraint firstAttribute="width" constant="170" id="JUC-ke-AOf"/>
+                                    <constraint firstAttribute="width" secondItem="0Ut-jh-aXt" secondAttribute="height" multiplier="1:1" id="xRq-zi-AGA"/>
+                                </constraints>
+                                <imageReference key="image" image="sun.dust" catalog="system" symbolScale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTu-hp-DqF">
+                                <rect key="frame" x="16" y="536.33333333333337" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HtQ-jl-tHE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 ° C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIK-76-P75">
+                                <rect key="frame" x="97.666666666666686" y="426.33333333333331" width="180" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="L2k-lX-cf0"/>
+                                    <constraint firstAttribute="height" constant="70" id="mBl-GR-Dqm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="tertiaryLabelColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7m-ka-J6d">
+                                <rect key="frame" x="87.666666666666686" y="658" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9jb-3k-MuO"/>
+                                    <constraint firstAttribute="width" constant="200" id="Sef-lu-xoj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Choose a City.">
+                                    <fontDescription key="titleFontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="wyN-nM-j4G" kind="unwind" unwindAction="returnToMainViewController:" id="fc2-kL-4IS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1am-TR-Npj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OIK-76-P75" firstAttribute="top" secondItem="0Ut-jh-aXt" secondAttribute="bottom" constant="30" id="Bmw-NN-oW7"/>
+                            <constraint firstItem="0Ut-jh-aXt" firstAttribute="top" secondItem="KUF-bd-d16" secondAttribute="bottom" constant="40" id="Bnk-Mh-ZTc"/>
+                            <constraint firstItem="0Ut-jh-aXt" firstAttribute="centerX" secondItem="vhv-40-NTq" secondAttribute="centerX" id="H7r-HZ-aJK"/>
+                            <constraint firstItem="FlO-Kq-Jtb" firstAttribute="top" secondItem="vhv-40-NTq" secondAttribute="top" id="LNf-ZC-HZU"/>
+                            <constraint firstItem="FlO-Kq-Jtb" firstAttribute="trailing" secondItem="1am-TR-Npj" secondAttribute="trailing" id="Mg2-np-ef5"/>
+                            <constraint firstItem="sTu-hp-DqF" firstAttribute="leading" secondItem="1am-TR-Npj" secondAttribute="leading" constant="16" id="Y93-aQ-qKK"/>
+                            <constraint firstItem="FlO-Kq-Jtb" firstAttribute="leading" secondItem="vhv-40-NTq" secondAttribute="leading" id="auC-Gd-xhD"/>
+                            <constraint firstItem="1am-TR-Npj" firstAttribute="trailing" secondItem="sTu-hp-DqF" secondAttribute="trailing" constant="16" id="gSj-C3-ZN9"/>
+                            <constraint firstItem="KUF-bd-d16" firstAttribute="top" secondItem="1am-TR-Npj" secondAttribute="top" constant="150" id="hEj-Sx-7iQ"/>
+                            <constraint firstItem="KUF-bd-d16" firstAttribute="leading" secondItem="1am-TR-Npj" secondAttribute="leading" constant="16" id="i8K-BF-q5F"/>
+                            <constraint firstItem="sTu-hp-DqF" firstAttribute="top" secondItem="OIK-76-P75" secondAttribute="bottom" constant="40" id="iKb-GQ-EkE"/>
+                            <constraint firstAttribute="bottom" secondItem="N7m-ka-J6d" secondAttribute="bottom" constant="70" id="jdB-R6-7bf"/>
+                            <constraint firstItem="OIK-76-P75" firstAttribute="centerX" secondItem="vhv-40-NTq" secondAttribute="centerX" id="jfy-6S-yGs"/>
+                            <constraint firstAttribute="bottom" secondItem="FlO-Kq-Jtb" secondAttribute="bottom" id="mXl-pS-bVI"/>
+                            <constraint firstItem="1am-TR-Npj" firstAttribute="trailing" secondItem="KUF-bd-d16" secondAttribute="trailing" constant="16" id="wzv-Le-Is0"/>
+                            <constraint firstItem="N7m-ka-J6d" firstAttribute="centerX" secondItem="vhv-40-NTq" secondAttribute="centerX" id="x4Q-HL-fkH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cIE-l2-88S"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="KUF-bd-d16" id="ay9-4W-7Zr"/>
+                        <outlet property="descriptionLabel" destination="sTu-hp-DqF" id="Uzr-bu-lXI"/>
+                        <outlet property="imageWeather" destination="0Ut-jh-aXt" id="Ibe-mK-A9A"/>
+                        <outlet property="tempLabel" destination="OIK-76-P75" id="7re-qT-0bs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdo-ca-yH5" sceneMemberID="firstResponder"/>
+                <exit id="wyN-nM-j4G" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="83.497536945812811"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun.dust" catalog="system" width="128" height="119"/>
+        <image name="weatherImage" width="1770" height="2129"/>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
